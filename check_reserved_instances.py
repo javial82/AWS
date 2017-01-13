@@ -15,6 +15,10 @@ from pytz import timezone
 
 
 __version__ = "0.1"
+__title__ = "check_reserved_instances"
+__author__ = "Xavier Alonso"
+__email__ = "javi.al@gmail.com"
+
 EXPIRATION_DAYS = 60
 
 def parser_args():
