@@ -16,7 +16,7 @@ __version__ = "0.1"
 __version__ = "0.1"
 __title__ = "delete_bucket_content"
 __author__ = "Xavier Alonso"
-__email__ = "xavier.alonso@gmail.com"
+__email__ = "javi.al@gmail.com"
 
 
 def parser_args():
