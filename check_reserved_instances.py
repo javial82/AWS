@@ -72,14 +72,14 @@ class AWSConnect(object):
                                 and reserve['Scope'] == 'Region'\
                                 and instance['InstanceType'] == reserve[
                                         'InstanceType'
-                                ]:
+                                ] and instance['State']['Name'] == 'running':
                             reserve['InstanceCount'] = reserve[
                                 'InstanceCount'
                             ] - 1
             for reserve in reserved_instances:
                 if reserve['State'] == 'active'\
                         and reserve['InstanceCount'] > 0:
-                    self.unused = self.unused + reserve['DBInstanceCount']
+                    self.unused = self.unused + reserve['InstanceCount']
         elif self.service == 'rds':
             dbinstances = Rds(self.con).get_dbinstances()['DBInstances']
             reserved_dbinstances = Rds(self.con).get_reserved_dbinstances()[
