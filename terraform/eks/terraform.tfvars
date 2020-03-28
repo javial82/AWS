@@ -5,7 +5,7 @@ pub_subnets = [
   "10.0.2.0/24"
 ]
 
-pub_subnets = [
+priv_subnets = [
   "10.0.3.0/24",
   "10.0.4.0/24"
 ]
